@@ -1,30 +1,53 @@
 package uebungsBeispiele3;
 
+import java.util.Arrays;
+
 public class NumberHelper {
     public static void main(String[] args) {
-        /*
-        int[][] numbers = new int[][]{[0, 1, 9],[6, 3, 2]};
-        int[][] getFlatArray (numbers);
-        for (int x = 0; x < 6; x++) {
-            System.out.println(numbers[x]);
-            */
 
-        }
-    }
-/*
-    public static int getFlatArray(int[][] numbers) {
-        int[] output = new int[];
-        for (int i = 0; i < 2; i++) {
-            for (int y = 0; y < 3; y++) {
-                for (int x = 0; x < 6; x++) {
-                    output[x] = numbers[i][y];
-                    System.out.println(output[x]);
-                    return x;
-                }return y;
-            }return i;
-
+        int[][] arr = new int[][]{{0, 1, 9}, {6, 3, 2}};
+       // getFlatArray(numbers);
+       // for (int x = 0; x < numbers.length; x++) {
+            System.out.println(Arrays.toString(getFlatArray(arr)));
         }
 
+
+    public static int[] getFlatArray(int[][] numbers) {
+        // this to know who long is our array
+        int l = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                l++;
+            }
+        }
+        //this to make a new array which is flat
+        int[] arr2 = new int[l];
+        int k = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                arr2[k] = numbers[i][j];
+                k++;
+            }
+        }
+        return arr2;
     }
 }
-*/
+
+
+/*
+        int i = 0;
+        int y = 0;
+        int x = 0;
+        int output[] = new int[numbers.length];
+
+        while (x < numbers.length) {
+            output[i] = numbers[y][x];
+            x++;
+            i++;
+            if (x == numbers.length - 1) {
+                y++;
+            }
+        }
+    return output;
+        */
+
