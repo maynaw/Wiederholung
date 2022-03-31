@@ -1,5 +1,5 @@
 package zam2021PR1HK1;
-
+/*
 public class BattleShipMap {
     public static void main(String[] args) {
         int[][] map = new int[][]{{0, 0, 0, +2, 0, +1, +1, 0, 0, 0,},
@@ -19,8 +19,11 @@ public class BattleShipMap {
             System.out.println("");
         }
     }
+
     public int totalBattleShipStrength(char player){
 int sum = 0;
-for (int i = 0; i<map.l)
+for (int i = 0; i<map.l){
     }
 }
+
+ */

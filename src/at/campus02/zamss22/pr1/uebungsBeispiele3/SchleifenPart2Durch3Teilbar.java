@@ -1,4 +1,4 @@
-package uebungsBeispiele3;
+package at.campus02.zamss22.pr1.uebungsBeispiele3;
 
 public class SchleifenPart2Durch3Teilbar {
     public static void main(String[] args) {
