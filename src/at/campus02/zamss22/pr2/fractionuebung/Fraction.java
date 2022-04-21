@@ -1,12 +1,27 @@
-package at.campus02.zamss22.pr2;
+package at.campus02.zamss22.pr2.fractionuebung;
 
 public class Fraction {
+    private static int nrFractiions =0;
    private int zaehler;
     private int nenner;
 
     public Fraction(int zaehler, int nenner){
         this.zaehler = zaehler;
         this.nenner = nenner;
+        ++nrFractiions;
+        //nrFractiions = nrFractions +1;
+    }
+
+    @Override
+    public String toString() {
+        return zaehler + " /"+ nenner;
+
+    }
+
+    public static int getNrFractiions(){
+        return nrFractiions;
+
+
     }
     public int getZaehler(){
         return zaehler;

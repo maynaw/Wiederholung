@@ -1,4 +1,4 @@
-package at.campus02.zamss22.pr2;
+package at.campus02.zamss22.pr2.fractionuebung;
 
 public class FractionDemo {
     public static void main(String[] args) {
@@ -8,5 +8,7 @@ public class FractionDemo {
 
         Fraction mult = fr1.multiplicate(fr2);
         mult.print();
+        System.out.println(mult);
+        System.out.println(Fraction.getNrFractiions());
     }
 }

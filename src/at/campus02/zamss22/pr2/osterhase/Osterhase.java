@@ -1,26 +1,17 @@
 package at.campus02.zamss22.pr2.osterhase;
 
 public class Osterhase {
+    private static int haeschenZaehler = 1;
     private int anzahlVersteckteEier;
     private String name;
+    private int haeschenNummer;
+    // 1x egal wieviele Häschen ich erstelle
+    // statische Attribute gehören zur klasse
+    private HasenReligion_Enum personlicherGlaube;
 
     public Osterhase(String name, int anzahlVersteckteEier) {
         this.name = name;
         this.anzahlVersteckteEier = anzahlVersteckteEier;
-    }
-
-    public Osterhase(String name) {
-        this.name = name;
-        this.anzahlVersteckteEier = 0;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 //    public void aendereAnzahlEier(int anzahlVersteckteEier) {
@@ -46,7 +37,6 @@ public class Osterhase {
     }
 
     public int getAnzahlVersteckteEier() {
-
         return anzahlVersteckteEier;
     }
 
@@ -55,4 +45,37 @@ public class Osterhase {
             this.anzahlVersteckteEier = anzahlVersteckteEier;
         }
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Osterhase(String name, int anzahlVersteckteEier, HasenReligion_Enum glaube) {
+        this.name = name;
+        this.anzahlVersteckteEier = 0;
+        haeschenNummer = haeschenZaehler++; // jeder Osterhase soll eine eigene eindeutige Nummer haben
+        personlicherGlaube = glaube;
+    }
+
+    public Osterhase(String name) {
+        this.name = name;
+        this.anzahlVersteckteEier = 0;
+        haeschenNummer = haeschenNummer++;
+        personlicherGlaube = HasenReligion_Enum.LANGE_OHREN_ZEUGEN;
+        // standard Glaube, wenn kein Glaube angegeben wird
+    }
+
+    public int getHaeschenNummer() {
+        return haeschenNummer;
+    }
+    @Override
+    public String toString() {
+        return name + "versteckte " + anzahlVersteckteEier + "Eier und glaubt an: " + personlicherGlaube;
+
+    }
+
 }
