@@ -36,5 +36,35 @@ public class HasenApp {
         hs.addHase(o4);
 
         hs.hoppelAll();
+
+        // try around with up and downcasting
+        Osterhase o1 = new Osterhase("Mrs.Egg");
+        Hase h1 = new Hase("Common rabbit (but cute)");
+        Weihnachtshase w2 = new Weihnachtshase("Mr.Snow");
+
+        Weihnachtshase wh;
+        Osterhase oh;
+        Hase h;
+
+        // vererbungshierarchie
+//                                --->_ Osterhase
+//         object --> Hase ---
+//                                ---->Weihnactshase
+
+    // upcasting : assighing a chld class to a reference of its partent class
+        // example:
+        // this is Upcasting
+        h = o1; // assigh from right (child class Osterhase) to left ( parent class Hase)
+        // what is the difference if i acces now my Mrs. Egg via the h Hase referernce
+        // -> the versteckeOstereier is missing because we only see attributes and methods
+        // already the Hase has ( imagine : we view the Osterhase Mrs.Egg through the lens of a Hase)
+
+        h.hoppeln();
+        // why do make this? because of poloymorphism ( think about arraylist)
+        h = w2; // up casting
+
+        wh = (Weihnachtshase) h; // Doun casting
+
+
     }
 }
