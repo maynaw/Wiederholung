@@ -1,5 +1,7 @@
 package at.campus02.zamss22.pr2.hasen;
 
+import java.util.ArrayList;
+
 public class HasenApp {
     public static void main(String[] args) {
 
@@ -38,8 +40,8 @@ public class HasenApp {
         hs.hoppelAll();
 
         // try around with up and downcasting
-        Osterhase o1 = new Osterhase("Mrs.Egg");
-        Hase h1 = new Hase("Common rabbit (but cute)");
+        Osterhase o3 = new Osterhase("Mrs.Egg");
+        Hase h4 = new Hase("Common rabbit (but cute)");
         Weihnachtshase w2 = new Weihnachtshase("Mr.Snow");
 
         Weihnachtshase wh;
@@ -51,7 +53,7 @@ public class HasenApp {
 //         object --> Hase ---
 //                                ---->Weihnactshase
 
-    // upcasting : assighing a chld class to a reference of its partent class
+        // upcasting : assighing a chld class to a reference of its partent class
         // example:
         // this is Upcasting
         h = o1; // assigh from right (child class Osterhase) to left ( parent class Hase)
@@ -65,6 +67,12 @@ public class HasenApp {
 
         wh = (Weihnachtshase) h; // Doun casting
 
+// interface example
+        ArrayList<GoesToParty> partyPeople = new ArrayList<>();
+        partyPeople.add(wh);
 
+        for (GoesToParty p : partyPeople) {
+            p.party("alcoholfree champagne", "unicorn cake");
+        }
     }
 }
