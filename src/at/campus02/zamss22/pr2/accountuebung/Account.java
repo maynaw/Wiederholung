@@ -2,7 +2,7 @@ package at.campus02.zamss22.pr2.accountuebung;
 
 import java.util.Objects;
 
-public class Account {
+public class Account implements Comparable<Account> {
     private static int uniqueID = 1;
 
     private String owner;
@@ -15,6 +15,7 @@ public class Account {
         this.owner = owner;
         this.iban = iban;
         this.bic = bic;
+        accountID = uniqueID++;
         balance = 0.0;
     }
 
@@ -66,5 +67,18 @@ public class Account {
     @Override
     public int hashCode() {
         return Objects.hash(iban);
+    }
+
+    @Override
+    public int compareTo(Account o) {
+        if (this.accountID < o.accountID){
+            return -1;
+        }
+        if (this.accountID > o.accountID){
+            return 1;
+        }
+        return 0;
+        // alternative loesung
+        // return INteger.compare(this.accountID, o.accountID);
     }
 }
