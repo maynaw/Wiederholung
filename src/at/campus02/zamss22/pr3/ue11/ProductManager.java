@@ -5,7 +5,7 @@ import java.util.List;
 import java.io.*;
 
 public class ProductManager {
-
+/*
     List<Produkt> produktList = new ArrayList<>();
 
     public void add(Produkt p) {
@@ -38,3 +38,6 @@ public class ProductManager {
         System.out.println("Product Information successfully read.");
     }
 }
+
+
+ */
